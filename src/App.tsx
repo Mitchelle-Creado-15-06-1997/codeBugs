@@ -20,23 +20,26 @@ export function App() {
   )
 
   const loadAllTransactions = useCallback(async () => {
+    noView = true
     setIsLoading(true)
+    
     // transactionsByEmployeeUtils.invalidateData()
 
     await employeeUtils.fetchAll()
     setIsLoading(false)
     await paginatedTransactionsUtils.fetchAll()
-    noView = true
+    
   }, [employeeUtils, paginatedTransactionsUtils, transactionsByEmployeeUtils])
 
   const loadAllTransactionsAllEmp = useCallback(async () => {
+    noView = true
     setIsLoading(true)
+    
     // transactionsByEmployeeUtils.invalidateData()
 
     await employeeUtils.fetchAll()
     setIsLoading(false)
     await paginatedTransactionsUtils.fetchAll()
-    noView = true
   }, [employeeUtils, paginatedTransactionsUtils, transactionsByEmployeeUtils])
 
   const loadTransactionsByEmployee = useCallback(
@@ -89,7 +92,7 @@ export function App() {
         <div className="RampGrid">
           <Transactions transactions={transactions} />
 
-          {transactions !== null && noView && (
+          {transactions !== null && paginatedTransactions?.nextPage && (
             <button
               className={noView?"RampButton":"hidden"}
               disabled={paginatedTransactionsUtils.loading}
