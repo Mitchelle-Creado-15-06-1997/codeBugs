@@ -31,6 +31,19 @@
       "approved": true
     },
     {
+      "id": "77af111b-4177-4774-af57-36df9053e189",
+      "amount": 8000.22,
+      "employee": {
+        "id": "89bd9324-04e0-4cd6-aa27-981508bd219f",
+        "firstName": "James",
+        "lastName": "Smith",
+        "extras": 2
+      },
+      "merchant": "Test",
+      "date": "8/5/2022",
+      "approved": true
+    },
+    {
       "id": "6e6698a6-972e-4d6e-a491-0e738616e75a",
       "amount": 613.19,
       "employee": {

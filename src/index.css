@@ -159,6 +159,10 @@ hr.RampBreak--l {
   cursor: pointer;
 }
 
+.hidden {
+  display:none;
+}
+
 .RampButton:hover {
   background-color: var(--color-lighter-shade);
 }
