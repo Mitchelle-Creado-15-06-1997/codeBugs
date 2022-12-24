@@ -21,7 +21,7 @@ export function App() {
 
   const loadAllTransactions = useCallback(async () => {
     setIsLoading(true)
-    transactionsByEmployeeUtils.invalidateData()
+    // transactionsByEmployeeUtils.invalidateData()
 
     await employeeUtils.fetchAll()
     setIsLoading(false)
@@ -31,7 +31,7 @@ export function App() {
 
   const loadAllTransactionsAllEmp = useCallback(async () => {
     setIsLoading(true)
-    transactionsByEmployeeUtils.invalidateData()
+    // transactionsByEmployeeUtils.invalidateData()
 
     await employeeUtils.fetchAll()
     setIsLoading(false)
